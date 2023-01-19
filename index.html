@@ -7,7 +7,7 @@
     <title>Parallax | Firewatch </title>
     <link href="./assets/icons/Frontnend-icon-favicon.png" rel="icon" type="image/x-icon"/>
     <link href="./index.css" rel="stylesheet" type="text/css" />
-
+    <link rel="preload" href="./assets/images/Firewatch-background-afternoon.png" as="image" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap" rel="stylesheet">
@@ -21,35 +21,42 @@
     <header> 
         <nav> 
             <ul> 
-                <li class="underlined" id="transY"> <a href="#home">home </a> </li>
-                <li class="underlined"> <a href="#about">about </a>  </li>
+                <li class="underlined" id="transY"> <a class="nav"  href="#home">home </a> </li>
+                <li class="underlined"> <a class="nav" href="#about">about </a>  </li>
                 <li> <img id="logo" src="https://www.code-master.be/codemaster-white-logo.svg" alt="Header's icon"/> </li>
-                <li class="underlined"> <a href="#projects">projects </a> </li>
-                <li class="underlined" id="transY"> <a href="#contact">contact </a> </li>
+                <li class="underlined"> <a class="nav"  href="#projects">projects </a> </li>
+                <li class="underlined" id="transY"> <a class="nav"  href="#contact">contact </a> </li>
             </ul>
         </nav>
     </header>
 
     <section id="home">
+        <!-- CONTENT -->
         <main>
             <h1> Need a front-end developer? </h1>
-            <h2> Let's work together! </h2>
+            <h2> <a id="letsw" href="#about">Let's work together!</a> </h2>
         </main>
 
+        
+        <!-- BIRDS FLYING -->
         <div id="b1">
-            <img class="bird" src="./assets/gifs/Bird-flying.gif" alt="bird flying" />
+            <img class="bird" src="./assets/gifs/Blue-bird-flying.gif" alt="bird flying" />
         </div>
         <div id="b2">
-            <img class="bird" src="./assets/gifs/Bird-flying.gif" alt="bird flying" />
+            <img class="bird" src="./assets/gifs/Blue-bird-flying.gif" alt="bird flying" />
         </div>
+
     </section>
 
     <section id="about">
+
+
+        <!-- BIRDS FLYING -->
         <div id="b1">
-            <img class="bird" src="./assets/gifs/Bird-flying.gif" alt="bird flying" />
+            <img class="bird" src="./assets/gifs/Blue-bird-flying.gif" alt="bird flying"/>
         </div>
         <div id="b2">
-            <img class="bird" src="./assets/gifs/Bird-flying.gif" alt="bird flying" />
+            <img class="bird" src="./assets/gifs/Blue-bird-flying.gif" alt="bird flying"/>
         </div>
     </section>
 </body>

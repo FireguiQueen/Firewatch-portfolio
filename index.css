@@ -2,22 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     overflow-x: hidden;
-    background-repeat: no-repeat; 
     list-style: none;
     text-decoration: none;
+    color: white;
+
 }
 
 body{
     height: 100vh;
     width: 100%;
-    background-image: url(./assets/images/Firewatch-background-afternoon.png);
+    scroll-behavior: smooth;
 
 }
-html, body { 
-    scroll-behavior: smooth;
-  }
+
+/* HEADER */
 header{
     position: fixed;
     left: 50%;
@@ -28,16 +27,27 @@ header nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     font-size: 25px;
     gap: 35px;
 }
-a{
-    color: white;
-    font-size: 30px;
+
+img#logo{
+    width: 7rem;
+    height: 7rem;
+    margin-inline: 30px;
+}
+#transY{
+    transform: translateY(-7px);
 }
 
 
+#letsw{
+    color: rgb(0, 0, 0);
+    font-size: 45px;
+
+}
+
+/* SECTIONS */ 
 section#home{
     display: flex;
     justify-content: center;
@@ -58,103 +68,107 @@ section#about{
     background-image: url(./assets/images/Firewatch-background-dark.png);
 }
 
-img#logo{
-    width: 7rem;
-    height: 7rem;
-    margin-inline: 30px;
-}
-img.bird{
-    width: 40px;
-    height: 40px;
-}
-
-
-#b1{
-    animation: bird 13s linear infinite;
-}
-
-#b2{
-    animation: bird1 13s linear infinite;
-}
-
-@keyframes bird {
-    0%{
-        transform: scale(.1) translate(13vw, 50vh);
-    }
-    100%{
-        transform: scale(1) translate(120vw, 70vh);
-    }
-
-}
-
-@keyframes bird1 {
-    0%{
-        transform: scale(.6) translate(0vw, 60vh);
-    }
-    100%{
-        transform: scale(1.4) translate(100vw, 50vh);
-    }
-
-}
-
-#transY{
-    transform: translateY(-7px);
-}
-
-
-.underlined::after{
-    margin-top: 340px; 
-    content: '';
-    display: block;
-    width: 0px;
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-    margin: auto;
-    transition: width 240ms linear, margin-top 300ms linear;
-
-}
-
-.underlined:hover::after{
-    content: '';
-    display: block;
-    width: 50px;
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-    margin: auto;
-    margin-top: 3px;
-    transition: width 210ms linear, margin-top 300ms linear;
-}
-
 main{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 25px;
     font-family: cursive;
-
-    animation: appear 900ms linear forwards;
+    width: 500px;
 }
+
 h1{
-    font-size: x-large;
-    color:rgba(255, 255, 255, 0);
-    word-spacing: 9px;
-    background-image: linear-gradient(45deg,rgb(27, 26, 26), rgb(67, 63, 63));
+    font-size: 29px;
+    color: transparent;
+    word-spacing: 8px;
+    background-image: linear-gradient(to right,rgb(27, 26, 26), rgb(207, 103, 38), rgb(1, 1, 1));
     background-clip: text;
+    transition: color 200ms linear;
     -webkit-background-clip: text;
-
-
-
 }
-h2{
+
+h2#letsw{
     font-size: 45px;
+    display: block;
     border-right: 1px solid rgb(239, 234, 234);
     animation: cursor 700ms linear infinite, widthing 2s steps(43) forwards alternate;
     filter: drop-shadow(10px 25px 1px rgba(0, 0, 0, 0.275));
     white-space: nowrap;
+    color: rgba(226, 19, 85, 0);
     word-spacing: 10px;
+    transition: color 200ms linear;
+    text-align: center;
+
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to top,rgba(241, 118, 41, 0.57), rgba(247, 183, 55, 0.396), rgba(0, 0, 0, 0.772) 56%);
 
 }
+
+
+
+/* Birds */ 
+img.bird{
+    width: 40px;
+    height: 40px;
+}
+
+#b1{
+    animation: bird 13s linear infinite;
+}
+#b2{
+    animation: bird1 13s linear infinite;
+}
+
+
+@keyframes bird {
+    0%{
+        transform: translateX(-60vw) translateY(-50vh) scale(.1);
+    }
+    100%{
+        transform: translateX(60vw) translateY(0vh) scale(1.2);
+    }
+}
+
+@keyframes bird1 {
+    0%{
+        transform: translateX(-80vw) translateY(90vh) scale(3);
+        filter: opacity(1);
+    }
+    100%{
+        transform: translateX(60vw) translateY(-90vh) scale(.4);
+        filter: opacity(.2);
+    }
+
+}
+
+
+
+
+.underlined::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    transition: width 240ms linear, margin-top 300ms linear;
+}
+
+.underlined:hover::after{
+    content: '';
+    width: 50px;
+    height: 2px;
+    border-radius: 20px;
+    margin: auto;
+    display: block;
+    margin-top: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: width 210ms linear, margin-top 300ms linear;
+}
+
+
 @keyframes cursor {
     0%{
         border-right: 2.5px solid rgb(26, 26, 26);
@@ -189,4 +203,12 @@ h2{
 
 ::selection{
     background-color: transparent;
+    color: rgb(98, 34, 34);
+}
+
+
+#letsw:hover{
+    cursor: pointer;
+    color: rgb(226, 19, 84);
+    transition: color 200ms linear;
 }
