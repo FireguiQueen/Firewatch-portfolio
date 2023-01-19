@@ -27,7 +27,7 @@ header nav ul{
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    gap: 35px;
+    gap: 45px;
 }
 
 img#logo{
@@ -75,7 +75,7 @@ section#home{
     height: 100vh;
     background-attachment: fixed;
     background-size: cover;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.873) 10%, rgba(10, 10, 10, 0.267) 40%, transparent) , url(./assets/images/Firewatch-background-afternoon.png);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.873) 5%, rgba(10, 10, 10, 0.267) 30%, transparent) , url(./assets/images/Firewatch-background-afternoon.png);
     overflow: hidden;
 }
 
@@ -88,20 +88,22 @@ section#about{
 }
 
 main{
+    margin-inline: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: cursive;
     width: 100%;
-
+    height: 50vh;
+    border: 1px solid blue;
 }
 
 h1{
     font-size: 49px;
     color: transparent;
     word-spacing: 8px;
-    background-image: linear-gradient(to right,rgb(27, 26, 26), rgb(207, 103, 38), rgb(1, 1, 1));
+    background-image: linear-gradient(to right,rgb(27, 26, 26), rgb(78, 75, 74), rgb(1, 1, 1));
     background-clip: text;
     -webkit-background-clip: text;
     animation: appear 300ms linear;
@@ -117,8 +119,13 @@ h1::after{
 }
 
 h2 a{
-
-
+    padding-bottom: 40px;
+    text-align: center;
+    display: block;
+    font-size: 35px;
+    white-space: nowrap;
+    animation: typing 3s steps(37) forwards,cursor 500ms infinite;
+    filter: drop-shadow(3px 17px 1px rgba(0, 0, 0, 0.246));
 }
 
 
@@ -208,7 +215,14 @@ img.bird{
     }
 }
 
-
+@keyframes typing {
+    0%{
+        width: 0;
+    } 
+    100%{
+        width: 27rem;
+    }
+}
 
 
 
