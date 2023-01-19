@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            overflow-x: hidden;
+            background-repeat: no-repeat; 
+
+
+        }
+        body{
+            min-height: 100vh;
+            width: 100%;
+            background-color: rgb(231, 178, 178);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        section#home{
+            width: 100%;
+            height: 100vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-image: url(./assets/images/Firewatch-background-afternoon.png);
+        }
+
+        section#about{
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+
+            background-attachment: fixed;
+            background-image: url(./assets/images/Firewatch-background-dark.png);
+        }
+
+        img{
+            width: 40px;
+            height: 40px;
+        }
+        #b1{
+            animation: bird 13s linear infinite;
+        }
+
+        #b2{
+            animation: bird1 13s linear infinite;
+        }
+
+        @keyframes bird {
+            0%{
+                transform: scale(.1) translate(13vw, 50vh);
+            }
+            100%{
+                transform: scale(1) translate(120vw, 70vh);
+            }
+
+        }
+
+
+        
+        @keyframes bird1 {
+            0%{
+                transform: scale(.6) translate(0vw, 60vh);
+            }
+            100%{
+                transform: scale(1.4) translate(100vw, 50vh);
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <section id="home">
+        <div id="b1">
+            <img src="./assets/gifs/Bird-flying.gif" alt="bird flying" />
+        </div>
+        <div id="b2">
+            <img src="./assets/gifs/Bird-flying.gif" alt="bird flying" />
+        </div>
+    </section>
+
+    <section id="about">
+        <h1> OUJSFASITASUI*T </h1>
+    </section>
+</body>
+</html>
