@@ -12,6 +12,7 @@
 body{
     height: 100vh;
     width: 100%;
+
 }
 html, body { 
     scroll-behavior: smooth;
@@ -20,6 +21,7 @@ header{
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    font-family: 'Lato', sans-serif;
 }
 header nav ul{
     display: flex;
@@ -122,13 +124,34 @@ img.bird{
     transition: width 210ms linear, margin-top 300ms linear;
 }
 
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+    font-family: 'Rubik 80s Fade', cursive;
 
+    animation: appear 900ms linear forwards;
+}
 h1{
-    font-size: 40px;
+    font-size: x-large;
+    color:rgba(255, 255, 255, 0);
+    word-spacing: 9px;
+    background-image: linear-gradient(45deg,rgb(27, 26, 26), rgb(67, 63, 63));
+    background-clip: text;
+    -webkit-background-clip: text;
+
+
+
+}
+h2{
+    font-size: 45px;
     border-right: 1px solid rgb(239, 234, 234);
-    animation: cursor 500ms linear infinite, widthing 3s steps(30) alternate;
-    filter: drop-shadow(10px 25px 1px rgba(0, 0, 0, 0.523));
+    animation: cursor 700ms linear infinite, widthing 2s steps(43) forwards alternate;
+    filter: drop-shadow(10px 25px 1px rgba(0, 0, 0, 0.275));
     white-space: nowrap;
+    word-spacing: 10px;
 
 }
 @keyframes cursor {
@@ -146,6 +169,18 @@ h1{
         width: 1px;
     }
     100%{
-        width: 23rem;
+        width: 32rem;
+    }
+}
+
+@keyframes appear {
+    from{
+        transform: scale(.3);
+        filter:opacity(0);
+    } 
+    to{
+        transform: scale(1.1);
+        filter:opacity(1);
+
     }
 }
