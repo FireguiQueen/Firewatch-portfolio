@@ -13,7 +13,6 @@ body{
     height: 100vh;
     width: 100%;
     scroll-behavior: smooth;
-
 }
 
 /* HEADER */
@@ -36,16 +35,36 @@ img#logo{
     height: 7rem;
     margin-inline: 30px;
 }
+
+
 #transY{
     transform: translateY(-7px);
 }
 
-
-#letsw{
-    color: rgb(0, 0, 0);
-    font-size: 45px;
-
+.underlined::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    transition: width 240ms linear, margin-top 300ms linear;
 }
+.underlined:hover::after{
+    content: '';
+    width: 50px;
+    height: 2px;
+    border-radius: 20px;
+    margin: auto;
+    display: block;
+    margin-top: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: width 210ms linear, margin-top 300ms linear;
+}
+
+
+
+
 
 /* SECTIONS */ 
 section#home{
@@ -56,7 +75,7 @@ section#home{
     height: 100vh;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url(./assets/images/Firewatch-background-afternoon.png);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.873) 10%, rgba(10, 10, 10, 0.267) 40%, transparent) , url(./assets/images/Firewatch-background-afternoon.png);
     overflow: hidden;
 }
 
@@ -74,20 +93,39 @@ main{
     align-items: center;
     flex-direction: column;
     font-family: cursive;
-    width: 500px;
+    width: 100%;
+
 }
 
 h1{
-    font-size: 29px;
+    font-size: 49px;
     color: transparent;
     word-spacing: 8px;
     background-image: linear-gradient(to right,rgb(27, 26, 26), rgb(207, 103, 38), rgb(1, 1, 1));
     background-clip: text;
-    transition: color 200ms linear;
     -webkit-background-clip: text;
+    animation: appear 300ms linear;
+}
+h1::after{
+    content: '';
+    margin: 10px auto 5px auto;
+    display: block;
+    width: 50%;
+    height: 4.5px;
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(0, 0, 0, 0.674);
 }
 
-h2#letsw{
+h2 a{
+
+
+}
+
+
+
+
+
+/* h2#letsw{
     font-size: 45px;
     display: block;
     border-right: 1px solid rgb(239, 234, 234);
@@ -103,8 +141,9 @@ h2#letsw{
     background-clip: text;
     -webkit-background-clip: text;
     background-image: linear-gradient(to top,rgba(241, 118, 41, 0.57), rgba(247, 183, 55, 0.396), rgba(0, 0, 0, 0.772) 56%);
+} */
 
-}
+
 
 
 
@@ -120,8 +159,6 @@ img.bird{
 #b2{
     animation: bird1 13s linear infinite;
 }
-
-
 @keyframes bird {
     0%{
         transform: translateX(-60vw) translateY(-50vh) scale(.1);
@@ -130,7 +167,6 @@ img.bird{
         transform: translateX(60vw) translateY(0vh) scale(1.2);
     }
 }
-
 @keyframes bird1 {
     0%{
         transform: translateX(-80vw) translateY(90vh) scale(3);
@@ -146,69 +182,40 @@ img.bird{
 
 
 
-.underlined::after{
-    content: '';
-    width: 0;
-    height: 2px;
-    display: block;
-    margin: auto;
-    background-color: rgb(255, 255, 255);
-    transition: width 240ms linear, margin-top 300ms linear;
-}
 
-.underlined:hover::after{
-    content: '';
-    width: 50px;
-    height: 2px;
-    border-radius: 20px;
-    margin: auto;
-    display: block;
-    margin-top: 3px;
-    background-color: rgb(255, 255, 255);
-    transition: width 210ms linear, margin-top 300ms linear;
-}
+
+/* Typing effect */
+@keyframes appear {
+    from{
+        filter: opacity(0) blur(40px);
+        transform: translateX(-210px);
+
+    }
+    to{
+        filter: opacity(1) blur(0);
+        transform: translateX(0);
+
+    }
+} 
 
 
 @keyframes cursor {
     0%{
-        border-right: 2.5px solid rgb(26, 26, 26);
+        border-right: 2px solid gray;
     }
     100%{
-        border-right: 2.5px solid transparent;
+        border-right: 2px solid transparent;
     }
 }
 
 
-@keyframes widthing{
-    0%{
-        width: 1px;
-    }
-    100%{
-        width: 32rem;
-    }
-}
-
-@keyframes appear {
-    from{
-        transform: scale(.3);
-        filter:opacity(0);
-    } 
-    to{
-        transform: scale(1.1);
-        filter:opacity(1);
-
-    }
-}
 
 
+
+/* Others */ 
 ::selection{
     background-color: transparent;
     color: rgb(98, 34, 34);
 }
 
 
-#letsw:hover{
-    cursor: pointer;
-    color: rgb(226, 19, 84);
-    transition: color 200ms linear;
-}
