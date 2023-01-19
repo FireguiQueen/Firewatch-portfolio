@@ -36,11 +36,15 @@ a{
 
 
 section#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh;
     background-attachment: fixed;
     background-size: cover;
     background-image: url(./assets/images/Firewatch-background-afternoon.png);
+    overflow: hidden;
 }
 
 section#about{
@@ -60,6 +64,7 @@ img.bird{
     width: 40px;
     height: 40px;
 }
+
 
 #b1{
     animation: bird 13s linear infinite;
@@ -115,4 +120,32 @@ img.bird{
     margin: auto;
     margin-top: 3px;
     transition: width 210ms linear, margin-top 300ms linear;
+}
+
+
+h1{
+    font-size: 40px;
+    border-right: 1px solid rgb(239, 234, 234);
+    animation: cursor 500ms linear infinite, widthing 3s steps(30) alternate;
+    filter: drop-shadow(10px 25px 1px rgba(0, 0, 0, 0.523));
+    white-space: nowrap;
+
+}
+@keyframes cursor {
+    0%{
+        border-right: 2.5px solid rgb(26, 26, 26);
+    }
+    100%{
+        border-right: 2.5px solid transparent;
+    }
+}
+
+
+@keyframes widthing{
+    0%{
+        width: 1px;
+    }
+    100%{
+        width: 23rem;
+    }
 }
