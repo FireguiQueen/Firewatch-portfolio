@@ -13,7 +13,15 @@ body{
     height: 100vh;
     width: 100%;
 }
+:root{
+    scroll-behavior: smooth;
 
+}
+header{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
 header nav ul{
     display: flex;
     align-items: center;
@@ -21,9 +29,6 @@ header nav ul{
     color: white;
     font-size: 25px;
     gap: 30px;
-    -webkit-scroll-behavior: smooth;
-    scroll-behavior: smooth;
-
 }
 a{
     color: white;
@@ -37,17 +42,12 @@ section#home{
     background-attachment: fixed;
     background-size: cover;
     background-image: url(./assets/images/Firewatch-background-afternoon.png);
-    overflow-y: hidden;
 }
 
 section#about{
-    -webkit-scroll-behavior: smooth;
-
     width: 100%;
     height: 100vh;
     background-size: cover;
-    scroll-behavior: smooth;
-
     background-attachment: fixed;
     background-image: url(./assets/images/Firewatch-background-dark.png);
 }
@@ -79,8 +79,6 @@ img.bird{
     }
 
 }
-
-
 
 @keyframes bird1 {
     0%{
