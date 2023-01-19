@@ -10,9 +10,10 @@
 }
 
 body{
-    height: 100vh;
+    min-height: 120vh;
     width: 100%;
     scroll-behavior: smooth;
+    background-attachment: fixed;
 }
 
 /* HEADER */
@@ -75,7 +76,7 @@ section#home{
     height: 100vh;
     background-attachment: fixed;
     background-size: cover;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.873) 5%, rgba(10, 10, 10, 0.267) 30%, transparent) , url(./assets/images/Firewatch-background-afternoon.png);
+    background-image: url(./assets/images/Firewatch-background-afternoon.png);
     overflow: hidden;
 }
 
@@ -99,7 +100,7 @@ main{
 }
 
 h1{
-    font-size: 49px;
+    font-size: 24px;
     color: transparent;
     word-spacing: 8px;
     background-image: linear-gradient(to right,rgb(27, 26, 26), rgb(78, 75, 74), rgb(1, 1, 1));
@@ -118,21 +119,22 @@ h1::after{
 }
 
 h2 a{
-    padding: 5px 0 20px 0;
+    padding: 7px 0 30px 0;
     text-align: center;
     display: block;
     font-size: 45px;
+    color: black;
     white-space: nowrap;
-
+    letter-spacing: 7px;
     animation: typing 3s steps(37) forwards,cursor 500ms infinite;
-    filter: drop-shadow(3px 17px 1px rgba(0, 0, 0, 0.246));
+    filter: drop-shadow(3px 25px 1px rgba(0, 0, 0, 0.121));
     transition: color 200ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
     line-height: 75%;
 }
 h2 a:hover{
     color: rgb(231, 25, 87);
-    transition: color 200ms cubic-bezier(0.95, 0.05, 0.795, 0.035)
+    transition: color 200ms linear;
 }
 
 
@@ -226,7 +228,7 @@ img.bird{
         width: 0;
     } 
     100%{
-        width: 30rem;
+        width: 37rem;
     }
 }
 
