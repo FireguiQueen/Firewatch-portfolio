@@ -24,7 +24,7 @@ body{
     --section4: url(./assets/images//Background-green.jpg); */
 
     --section1: url(./assets/images//background-afternoon.png);
-    --section2: linear-gradient(to top, rgba(0, 0, 0, 0.779), rgba(0, 0, 0, 0.739), transparent 78%), url(./assets/images//background-blue.png);
+    --section2: linear-gradient(to top, rgba(0, 0, 0, 0.779), rgba(0, 0, 0, 0.739), transparent 88%), url(./assets/images//background-blue.png);
     --section3: url(./assets/images//background-blue2.jpg);
     --section4: url(./assets/images//background-green.jpg);
 }
@@ -108,7 +108,12 @@ section#home{
 }
 
 section#about{
+    display: flex;
+    justify-content: start;
+    align-items: left;
+    flex-direction: column;
     padding-left: 10%;
+    padding-top: 10%;
 
     min-width: 100%;
     height: 100vh;
@@ -195,14 +200,13 @@ h1 a:hover{
 }
 
 .about-me{
-    color: rgb(255, 255, 255);
-}
-p{
-    width: 40vw;
+    color: rgb(197, 192, 192);
+    width: 50vw;
 }
 
 .title-section{
     font-size: 50px;
+    margin-bottom: 30px;
 }
 
 
