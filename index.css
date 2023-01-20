@@ -6,13 +6,13 @@
     list-style: none;
     text-decoration: none;
     color: white;
+    scroll-behavior: smooth;
+
 
 }
 
 body{
-    min-height: 120vh;
     width: 100%;
-    scroll-behavior: smooth;
     background-attachment: fixed;
 }
 
@@ -240,4 +240,20 @@ img.bird{
     color: rgb(240, 233, 233);
 }
 
+
+
+/* scrollbar */ 
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgba(43, 43, 45, 0.997);
+}
+    
+::-webkit-scrollbar-thumb{
+    background-color: #0c0b0b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #3f3f3ff5;
+}
 
