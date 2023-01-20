@@ -37,7 +37,8 @@ header{
     transform: translateX(-50%);
     font-family: 'Lato', sans-serif;
     background-image: linear-gradient(to bottom, rgb(35, 33, 33), rgba(36, 33, 33, 0.936) 30%, rgba(36, 33, 33, 0.661), transparent);
-    z-index: 4;
+    z-index: 2;
+    font-family:cursive;
 }
 header nav ul{
     color: black;
@@ -200,11 +201,17 @@ h1 a:hover{
 }
 
 .about-me{
-    color: rgb(197, 192, 192);
+    color: rgb(255, 255, 255);
     width: 50vw;
+    line-height: 45px;
 }
 
 .title-section{
+    box-sizing: content-box;
+    padding: 20px;
+    width: fit-content;
+    background-image: linear-gradient(to left, rgba(16, 16, 73, 0.469), rgba(226, 31, 99, 0.536));
+    border-radius: 100% 100% 100% 26% / 55% 19% 100% 87%  ;
     font-size: 50px;
     margin-bottom: 30px;
 }
