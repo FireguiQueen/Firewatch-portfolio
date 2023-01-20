@@ -15,9 +15,9 @@ body{
 }
 :root{
     --section1: url(./assets/images//Background-afternoon.png);
-    --section2: url(./assets/images//Background-white.jpg);
+    --section2: url(./assets/images//Background-blue.png);
     --section3: url(./assets/images//Background-white.jpg);
-    --section4: url(./assets/images//Background-white.jpg);
+    --section4: url(./assets/images//Background-green.jpg);
 
 }
 
