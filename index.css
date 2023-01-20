@@ -11,12 +11,16 @@
 
 body{
     width: 100%;
-    background-attachment: fixed;
-    background-color: blue;
+    background-image: url(./assets/images//Firewatch-background-dark-blue-stars.png);
+}
+:root{
+    --section1: url(./assets/images//Background-blue);
+    --section2: url(./assets/images//Background-white.jpg);
 }
 
 /* HEADER */
 header{
+    width: 100%;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -29,7 +33,10 @@ header nav ul{
     font-size: 25px;
     gap: 45px;
 }
+ul{
+    animation: appear 300ms ease-out;
 
+}
 img#logo{
     width: 7rem;
     height: 7rem;
@@ -75,7 +82,7 @@ section#home{
     min-height: 1100px;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url(./assets/images/Firewatch-background-afternoon.png);
+    background-image: var(--section1);
     overflow: hidden;
 }
 
@@ -105,7 +112,7 @@ h1{
     background-image: linear-gradient(to right,rgb(27, 26, 26), rgb(78, 75, 74), rgb(1, 1, 1));
     background-clip: text;
     -webkit-background-clip: text;
-    animation: appear 300ms linear;
+    animation: appear 300ms ease-out;
 }
 h1::after{
     content: '';
@@ -127,35 +134,21 @@ h2 a{
     letter-spacing: 7px;
     animation: typing 3s steps(37) forwards,cursor 500ms infinite;
     filter: drop-shadow(3px 25px 1px rgba(0, 0, 0, 0.121));
-    transition: color 200ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    transition: 
+    color 200ms cubic-bezier(0.95, 0.05, 0.795, 0.035),
+    filter 200ms linear;
 
     line-height: 75%;
 }
 h2 a:hover{
     color: rgb(231, 25, 87);
-    transition: color 200ms linear;
+    filter: drop-shadow(3px 25px 1px rgba(232, 63, 63, 0.371));
+    transition: color 200ms linear, filter 200ms linear;
+
+
 }
 
 
-
-
-/* h2#letsw{
-    font-size: 45px;
-    display: block;
-    border-right: 1px solid rgb(239, 234, 234);
-    animation: cursor 700ms linear infinite, widthing 2s steps(43) forwards alternate;
-    filter: drop-shadow(10px 25px 1px rgba(0, 0, 0, 0.275));
-    white-space: nowrap;
-    color: rgba(226, 19, 85, 0);
-    word-spacing: 10px;
-    transition: color 200ms linear;
-    text-align: center;
-
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(to top,rgba(241, 118, 41, 0.57), rgba(247, 183, 55, 0.396), rgba(0, 0, 0, 0.772) 56%);
-} */
 
 
 
@@ -201,12 +194,12 @@ img.bird{
 /* Typing effect */
 @keyframes appear {
     from{
-        filter: opacity(0) blur(40px);
-        transform: translateX(-210px);
+        filter: opacity(0);
+        transform: translateX(-670px);
 
     }
     to{
-        filter: opacity(1) blur(0);
+        filter: opacity(1);
         transform: translateX(0);
 
     }
