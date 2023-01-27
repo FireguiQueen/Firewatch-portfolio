@@ -27,6 +27,9 @@ body{
     --section2: linear-gradient(to top, rgba(0, 0, 0, 0.779), rgba(0, 0, 0, 0.739), transparent 88%), url(./assets/images//background-blue.png);
     --section3: url(./assets/images//background-blue2.jpg);
     --section4: url(./assets/images//background-green.jpg);
+
+    --background-contact: rgba(0, 0, 0, 0.539);
+    --background-text: rgba(215, 206, 206, 0.635);
 }
 
 /* HEADER */
@@ -142,6 +145,7 @@ section#contact{
     background-attachment: fixed;
     background-image: var(--section4);
     overflow-y: hidden;
+    padding-inline: 210px;
 
     
 }
@@ -216,6 +220,35 @@ h1 a:hover{
     margin-bottom: 30px;
 }
 
+
+form{
+    background-color: var(--background-contact);
+    padding: 10px 50px;
+
+}
+fieldset{
+    overflow-y: hidden;
+    border: none;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    font-size: x-large;
+    
+}
+input{
+    color: gray;
+    font-size: 25px;
+    padding-left: 10px;
+
+}
+input, textarea{
+    background-color: var(--background-text);
+    outline: none;
+    border: none;
+}
 
 
 /* Birds */ 
